@@ -6,14 +6,14 @@
     "firmware/twiboot": "https://git.mtgames.nl/z80/twiboot",
     "software/cpm": "https://git.mtgames.nl/z80/cpm",
     "software/crt": "https://git.mtgames.nl/z80/crt",
-    "software/loader": "https://git.mtgames.nl/z80/loader"
-    "software/monitor": "https://git.mtgames.nl/z80/monitor"
-    "software/putsys": "https://git.mtgames.nl/z80/putsys"
-    "software/tetris": "https://git.mtgames.nl/z80/tetris"
-    "tools/convert-font": "https://git.mtgames.nl/z80/convert-font"
-    "tools/create-disk": "https://git.mtgames.nl/z80/create-disk"
-    "tools/mount-cpm": "https://git.mtgames.nl/z80/mount-cpm"
-    "tools/setup": "https://git.mtgames.nl/z80/setup"
+    "software/loader": "https://git.mtgames.nl/z80/loader",
+    "software/monitor": "https://git.mtgames.nl/z80/monitor",
+    "software/putsys": "https://git.mtgames.nl/z80/putsys",
+    "software/tetris": "https://git.mtgames.nl/z80/tetris",
+    "tools/convert-font": "https://git.mtgames.nl/z80/convert-font",
+    "tools/create-disk": "https://git.mtgames.nl/z80/create-disk",
+    "tools/mount-cpm": "https://git.mtgames.nl/z80/mount-cpm",
+    "tools/setup": "https://git.mtgames.nl/z80/setup",
     "tools/upload": "https://git.mtgames.nl/z80/upload"
   }
 }
