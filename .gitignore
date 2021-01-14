@@ -1,0 +1,15 @@
+/firmware/hdmi/
+/firmware/keyboard/
+/firmware/stm32/
+/firmware/twiboot/
+/software/cpm/
+/software/crt/
+/software/loader/
+/software/monitor/
+/software/putsys/
+/software/tetris/
+/tools/conver-font/
+/tools/create-disk/
+/tools/mount-cpm/
+/tools/setup/
+/tools/upload/
