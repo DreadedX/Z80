@@ -1,9 +1,9 @@
 {
   "projects": {
     "firmware/bootloader": "https://git.mtgames.nl/z80/bootloader",
+    "firmware/controller: "https://git.mtgames.nl/z80/controller",
     "firmware/hdmi": "https://git.mtgames.nl/z80/hdmi",
     "firmware/keyboard": "https://git.mtgames.nl/z80/keyboard",
-    "firmware/stm32": "https://git.mtgames.nl/z80/stm32",
     "firmware/twiboot": "https://git.mtgames.nl/z80/twiboot",
     "software/cpm": "https://git.mtgames.nl/z80/cpm",
     "software/crt": "https://git.mtgames.nl/z80/crt",
