@@ -1,5 +1,6 @@
 {
   "projects": {
+    "firmware/bootloader": "https://git.mtgames.nl/z80/bootloader",
     "firmware/hdmi": "https://git.mtgames.nl/z80/hdmi",
     "firmware/keyboard": "https://git.mtgames.nl/z80/keyboard",
     "firmware/stm32": "https://git.mtgames.nl/z80/stm32",
