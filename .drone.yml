@@ -11,17 +11,23 @@ steps:
           - meta git update
           - meta exec "git submodule update --init --recursive"
 
+    - name: firmware/bootloader
+      image: archlinux:base-devel
+      commands:
+          - pacman -Sy --noconfirm arm-none-eabi-gcc arm-none-eabi-newlib
+          - make -C firmware/bootloader
+
+    - name: firmware/controller
+      image: archlinux:base-devel
+      commands:
+          - pacman -Sy --noconfirm arm-none-eabi-gcc arm-none-eabi-newlib
+          - make -C firmware/controller
+
     - name: firmware/keyboard
       image: archlinux:base-devel
       commands:
           - pacman -Sy --noconfirm avr-gcc avr-libc
           - make -C firmware/keyboard
-
-    - name: firmware/stm32
-      image: archlinux:base-devel
-      commands:
-          - pacman -Sy --noconfirm arm-none-eabi-gcc arm-none-eabi-newlib
-          - make -C firmware/stm32
 
     - name: firmware/twiboot
       image: archlinux:base-devel
