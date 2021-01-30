@@ -13,9 +13,9 @@
     "software/tetris": "https://git.mtgames.nl/z80/tetris",
     "tools/convert-font": "https://git.mtgames.nl/z80/convert-font",
     "tools/create-disk": "https://git.mtgames.nl/z80/create-disk",
+    "tools/emulator": "https://git.mtgames.nl/z80/emulator"
     "tools/mount-cpm": "https://git.mtgames.nl/z80/mount-cpm",
     "tools/setup": "https://git.mtgames.nl/z80/setup",
     "tools/upload": "https://git.mtgames.nl/z80/upload",
-    "tools/emulator": "https://git.mtgames.nl/z80/emulator"
   }
 }
