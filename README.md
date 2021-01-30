@@ -39,12 +39,18 @@ The repository can then be cloned using:
 ```
 $ meta git clone https://git.mtgames.nl/z80/z80
 ```
-Some repositories rely on submodules, the following command ensures that these are cloned:
+Some repositories rely on submodules, after navigating into the newly created directory, the following command ensures that these are cloned:
 ```
 $ meta exec "git submodule update --init --recursive"
 ```
-
 The repository should now be ready for development.
+
+In order to update all sub-projects to the latest version the following command can be used:
+```
+$ meta git pull
+```
+
+During development each of the repositories can be viewed as individual git repositories.
 
 ## Requirements
 On an Arch Linux the following command will ensure that all the required packages are installed.
@@ -52,7 +58,7 @@ On an Arch Linux the following command will ensure that all the required package
 $ sudo pacman -S base-devel npm git  arm-none-eabi-gcc arm-none-eabi-newlib avr-gcc avr-libc sdcc python3 sdl2 sdl2_image
 ```
 
-(You will also need to manually install [zasm](https://aur.archlinux.org/packages/zasm), this will however change in the near future, see: z80/cpm#1, z80/loader#1, z80/monitor#2, z80/putsys#1.)
+(You will also need to manually install [zasm](https://aur.archlinux.org/packages/zasm), this will however change in the near future, see: z80/cpm#1, z80/loader#1, z80/monitor#2, z80/putsys#1 .)
 
 ## Building
 Each of the sub-projects contains a Makefile that allows the project to be build, this is the preferred method during development on a singe sub-project.
