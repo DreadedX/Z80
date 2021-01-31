@@ -11,6 +11,10 @@ This repository acts a a meta repository that contains all the different sub-pro
 	- [keyboard](https://git.mtgames.nl/z80/keyboard): Allows PS/2 keyboards to be used as an input device
 	- [twiboot](https://git.mtgames.nl/z80/twiboot): I2C bootloader for ATMega based chips
 
+- **hardware**: The schematic and PCB design files for the different components
+	- [library](https://git.mtgames.nl/z80/library): Common part that are shared between different schematics and PCB's.
+	- [memory](https://git.mtgames.nl/z80/memory): Board containing the computers memory.
+
 - **software**: The software that actually runs on the Z80 processor
 	- [cpm](https://git.mtgames.nl/z80/cpm): Source code for CP/M and the BIOS
 	- [crt](https://git.mtgames.nl/z80/crt): Custom C runtime implementation, not based on the standard
@@ -59,6 +63,17 @@ $ sudo pacman -S base-devel npm git  arm-none-eabi-gcc arm-none-eabi-newlib avr-
 ```
 
 (You will also need to manually install [zasm](https://aur.archlinux.org/packages/zasm), this will however change in the near future, see: z80/cpm#1, z80/loader#1, z80/monitor#2, z80/putsys#1 .)
+
+### Config
+Additionally you can configure git to ignore irrelevant changes in KiCAD files using the follwing commands:
+```
+$ git config --global filter.kicad_project.clean "sed -E 's/^update=.*$/update=Date/'"
+$ git config --global filter.kicad_project.smudge cat
+$ git config --global filter.kicad_sch.clean "sed -E 's/#(PWR|FLG)[0-9]+/#\1?/'"
+$ git config --global filter.kicad_sch.smudge cat
+```
+
+(Based on [this](https://jnavila.github.io/plotkicadsch/) blog post.)
 
 ## Building
 Each of the sub-projects contains a Makefile that allows the project to be build, this is the preferred method during development on a singe sub-project.

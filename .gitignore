@@ -3,6 +3,8 @@
 /firmware/hdmi/
 /firmware/keyboard/
 /firmware/twiboot/
+/hardware/library/
+/hardware/memory/
 /software/cpm/
 /software/crt/
 /software/loader/
