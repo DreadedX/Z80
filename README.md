@@ -62,10 +62,21 @@ On an Arch Linux the following command will ensure that all the required package
 $ sudo pacman -S base-devel npm git  arm-none-eabi-gcc arm-none-eabi-newlib avr-gcc avr-libc sdcc python3 sdl2 sdl2_image
 ```
 
+The microblaze compiler is also required to be installed, a script to build this compiler is provided in [tools/setup](https://git.mtgames.nl/z80/setup).
+This compiler will automatically get build if you execute the command in the next section.
+
 (You will also need to manually install [zasm](https://aur.archlinux.org/packages/zasm), this will however change in the near future, see: z80/cpm#1, z80/loader#1, z80/monitor#2, z80/putsys#1 .)
 
-### Config
-Additionally you can configure git to ignore irrelevant changes in KiCAD files using the follwing commands:
+## Tools
+The following command will make sure that the different tools are available in $PATH:
+```
+$ source source.sh
+```
+As stated in the last section, this will also make sure that the microblaze compiler is build and in the path.
+
+
+## Git
+In order to prevent unneeded changes from getting commited when working on schematics the following commands can be used:
 ```
 $ git config --global filter.kicad_project.clean "sed -E 's/^update=.*$/update=Date/'"
 $ git config --global filter.kicad_project.smudge cat
@@ -74,6 +85,7 @@ $ git config --global filter.kicad_sch.smudge cat
 ```
 
 (Based on [this](https://jnavila.github.io/plotkicadsch/) blog post.)
+
 
 ## Building
 Each of the sub-projects contains a Makefile that allows the project to be build, this is the preferred method during development on a singe sub-project.
