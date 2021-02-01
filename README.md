@@ -94,4 +94,4 @@ After navigating to the sub-projects directory the follwoing command will build 
 $ make
 ```
 If instead you want to build all the projects running the same command in the main directory will ensure that each of the sub-projects gets build.
-(This does currently exclude the [firmware/hdmi](https://git.mtgames.nl/z80/hdmi) as it requires some additional setup, see z80/z80#4.)
+(This does currently exclude the [firmware/hdmi](https://git.mtgames.nl/z80/hdmi) as it requires some additional setup, see z80/z80#4 .)
