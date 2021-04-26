@@ -8,8 +8,9 @@ all:
 	$(MAKE) -C software/putsys
 	$(MAKE) -C software/tetris
 
+	$(MAKE) -C firmware/bootloader
+	$(MAKE) -C firmware/controller
 	$(MAKE) -C firmware/keyboard
-	$(MAKE) -C firmware/stm32
 	$(MAKE) -C firmware/twiboot
 
 	$(MAKE) -C tools/emulator
@@ -23,8 +24,9 @@ clean:
 	$(MAKE) -C software/putsys clean
 	$(MAKE) -C software/tetris clean
 
+	$(MAKE) -C firmware/bootloader clean
+	$(MAKE) -C firmware/controller clean
 	$(MAKE) -C firmware/keyboard clean
-	$(MAKE) -C firmware/stm32 clean
 	$(MAKE) -C firmware/twiboot clean
 
 	$(MAKE) -C tools/emulator clean
