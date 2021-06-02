@@ -5,6 +5,7 @@ name: default
 steps:
     - name: init
       image: archlinux:base-devel
+      pull: always
       commands:
           - pacman -Sy --noconfirm npm git
           - npm i -g meta
@@ -13,30 +14,35 @@ steps:
 
     - name: firmware/bootloader
       image: archlinux:base-devel
+      pull: always
       commands:
           - pacman -Sy --noconfirm arm-none-eabi-gcc arm-none-eabi-newlib
           - make -C firmware/bootloader
 
     - name: firmware/controller
       image: archlinux:base-devel
+      pull: always
       commands:
           - pacman -Sy --noconfirm arm-none-eabi-gcc arm-none-eabi-newlib
           - make -C firmware/controller
 
     - name: firmware/keyboard
       image: archlinux:base-devel
+      pull: always
       commands:
           - pacman -Sy --noconfirm avr-gcc avr-libc
           - make -C firmware/keyboard
 
     - name: firmware/twiboot
       image: archlinux:base-devel
+      pull: always
       commands:
           - pacman -Sy --noconfirm avr-gcc avr-libc
           - make -C firmware/twiboot
 
     - name: zasm
       image: archlinux:base-devel
+      pull: always
       commands:
           - pacman -Sy --noconfirm git
           - git clone https://aur.archlinux.org/zasm.git zasm
@@ -47,42 +53,49 @@ steps:
 
     - name: software/cpm
       image: archlinux:base-devel
+      pull: always
       commands:
           - pacman -U zasm/zasm-4.2.5-1-any.pkg.tar.zst --noconfirm
           - make -C software/cpm
 
     - name: software/loader
       image: archlinux:base-devel
+      pull: always
       commands:
           - pacman -U zasm/zasm-4.2.5-1-any.pkg.tar.zst --noconfirm
           - make -C software/loader
 
     - name: software/monitor
       image: archlinux:base-devel
+      pull: always
       commands:
           - pacman -U zasm/zasm-4.2.5-1-any.pkg.tar.zst --noconfirm
           - make -C software/monitor
 
     - name: software/putsys
       image: archlinux:base-devel
+      pull: always
       commands:
           - pacman -U zasm/zasm-4.2.5-1-any.pkg.tar.zst --noconfirm
           - make -C software/putsys
 
     - name: software/crt
       image: archlinux:base-devel
+      pull: always
       commands:
           - pacman -Sy --noconfirm sdcc
           - make -C software/crt
 
     - name: software/tetris
       image: archlinux:base-devel
+      pull: always
       commands:
           - pacman -Sy --noconfirm sdcc
           - make -C software/tetris
 
     - name: tools/create-disk
       image: archlinux:base-devel
+      pull: always
       commands:
           - pacman -Sy --noconfirm python3
           - cd tools/create-disk
@@ -90,11 +103,13 @@ steps:
 
     - name: tools/upload
       image: archlinux:base-devel
+      pull: always
       commands:
           - make -C tools/upload
 
     - name: tools/emulator
       image: archlinux:base-devel
+      pull: always
       commands:
           - pacman -Sy --noconfirm sdl2 sdl2_image
           - make -C tools/emulator
