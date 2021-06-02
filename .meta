@@ -4,7 +4,6 @@
     "firmware/controller": "https://git.mtgames.nl/z80/controller",
     "firmware/hdmi": "https://git.mtgames.nl/z80/hdmi",
     "firmware/keyboard": "https://git.mtgames.nl/z80/keyboard",
-    "firmware/twiboot": "https://git.mtgames.nl/z80/twiboot",
     "hardware/library": "https://git.mtgames.nl/z80/library",
     "hardware/memory": "https://git.mtgames.nl/z80/memory",
     "software/cpm": "https://git.mtgames.nl/z80/cpm",

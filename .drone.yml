@@ -34,13 +34,6 @@ steps:
           - pacman -Sy --noconfirm arm-none-eabi-gcc arm-none-eabi-newlib
           - make -C firmware/keyboard
 
-    - name: firmware/twiboot
-      image: archlinux:base-devel
-      pull: always
-      commands:
-          - pacman -Sy --noconfirm avr-gcc avr-libc
-          - make -C firmware/twiboot
-
     - name: zasm
       image: archlinux:base-devel
       pull: always

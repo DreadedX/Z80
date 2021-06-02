@@ -11,7 +11,6 @@ all:
 	$(MAKE) -C firmware/bootloader
 	$(MAKE) -C firmware/controller
 	$(MAKE) -C firmware/keyboard
-	$(MAKE) -C firmware/twiboot
 
 	$(MAKE) -C tools/emulator
 	$(MAKE) -C tools/upload
@@ -27,7 +26,6 @@ clean:
 	$(MAKE) -C firmware/bootloader clean
 	$(MAKE) -C firmware/controller clean
 	$(MAKE) -C firmware/keyboard clean
-	$(MAKE) -C firmware/twiboot clean
 
 	$(MAKE) -C tools/emulator clean
 	$(MAKE) -C tools/upload clean
