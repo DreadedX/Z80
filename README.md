@@ -14,6 +14,7 @@ This repository acts a a meta repository that contains all the different sub-pro
 - **hardware**: The schematic and PCB design files for the different components
 	- [library](https://git.mtgames.nl/z80/library): Common part that are shared between different schematics and PCB's.
 	- [memory](https://git.mtgames.nl/z80/memory): Board containing the computers memory.
+	- [keyboard](https://git.mtgames.nl/z80/keyboard): Board containing the keyboard interface (PS/2 connector).
 
 - **software**: The software that actually runs on the Z80 processor
 	- [cpm](https://git.mtgames.nl/z80/cpm): Source code for CP/M and the BIOS

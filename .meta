@@ -6,6 +6,7 @@
     "firmware/keyboard": "https://git.mtgames.nl/z80/keyboard",
     "hardware/library": "https://git.mtgames.nl/z80/library",
     "hardware/memory": "https://git.mtgames.nl/z80/memory",
+    "hardware/keyboard": "https://git.mtgames.nl/z80/keyboard-hardware"
     "software/cpm": "https://git.mtgames.nl/z80/cpm",
     "software/crt": "https://git.mtgames.nl/z80/crt",
     "software/loader": "https://git.mtgames.nl/z80/loader",
@@ -17,6 +18,6 @@
     "tools/emulator": "https://git.mtgames.nl/z80/emulator",
     "tools/mount-cpm": "https://git.mtgames.nl/z80/mount-cpm",
     "tools/setup": "https://git.mtgames.nl/z80/setup",
-    "tools/upload": "https://git.mtgames.nl/z80/upload"
+    "tools/upload": "https://git.mtgames.nl/z80/upload",
   }
 }
