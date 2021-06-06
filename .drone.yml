@@ -12,28 +12,6 @@ steps:
           - meta git update
           - meta exec "git submodule update --init --recursive"
 
-    - name: firmware/bootloader
-      image: archlinux:base-devel
-      pull: always
-      commands:
-          - pacman -Sy --noconfirm arm-none-eabi-gcc arm-none-eabi-newlib
-          - make -C firmware/bootloader
-
-    - name: firmware/controller
-      image: archlinux:base-devel
-      pull: always
-      commands:
-          - pacman -Sy --noconfirm arm-none-eabi-gcc arm-none-eabi-newlib
-          - make -C firmware/controller
-
-    - name: firmware/keyboard
-      image: archlinux:base-devel
-      pull: always
-      commands:
-          # - pacman -Sy --noconfirm avr-gcc avr-libc
-          - pacman -Sy --noconfirm arm-none-eabi-gcc arm-none-eabi-newlib
-          - make -C firmware/keyboard
-
     - name: zasm
       image: archlinux:base-devel
       pull: always
@@ -51,6 +29,13 @@ steps:
       commands:
           - pacman -U zasm/zasm-4.2.5-1-any.pkg.tar.zst --noconfirm
           - make -C software/cpm
+
+    - name: software/crt
+      image: archlinux:base-devel
+      pull: always
+      commands:
+          - pacman -Sy --noconfirm sdcc
+          - make -C software/crt
 
     - name: software/loader
       image: archlinux:base-devel
@@ -73,19 +58,60 @@ steps:
           - pacman -U zasm/zasm-4.2.5-1-any.pkg.tar.zst --noconfirm
           - make -C software/putsys
 
-    - name: software/crt
-      image: archlinux:base-devel
-      pull: always
-      commands:
-          - pacman -Sy --noconfirm sdcc
-          - make -C software/crt
-
     - name: software/tetris
       image: archlinux:base-devel
       pull: always
       commands:
           - pacman -Sy --noconfirm sdcc
           - make -C software/tetris
+
+
+    - name: firmware/bootloader
+      image: archlinux:base-devel
+      pull: always
+      commands:
+          - pacman -Sy --noconfirm arm-none-eabi-gcc arm-none-eabi-newlib
+          - make -C firmware/bootloader
+
+    - name: firmware/controller
+      image: archlinux:base-devel
+      pull: always
+      commands:
+          - pacman -Sy --noconfirm arm-none-eabi-gcc arm-none-eabi-newlib
+          - make -C firmware/controller
+
+    - name: firmware/keyboard
+      image: archlinux:base-devel
+      pull: always
+      commands:
+          # - pacman -Sy --noconfirm avr-gcc avr-libc
+          - pacman -Sy --noconfirm arm-none-eabi-gcc arm-none-eabi-newlib
+          - make -C firmware/keyboard
+
+    - name: hardware/keyboard
+      image: setsoft/kicad_auto:latest
+      pull: always
+      commands:
+          - make -C hardware/keyboard
+
+    - name: hardware/memory
+      image: setsoft/kicad_auto:latest
+      pull: always
+      commands:
+          - make -C hardware/memory
+
+    - name: tools/emulator
+      image: archlinux:base-devel
+      pull: always
+      commands:
+          - pacman -Sy --noconfirm sdl2 sdl2_image
+          - make -C tools/emulator
+
+    - name: tools/upload
+      image: archlinux:base-devel
+      pull: always
+      commands:
+          - make -C tools/upload
 
     - name: tools/create-disk
       image: archlinux:base-devel
@@ -94,16 +120,3 @@ steps:
           - pacman -Sy --noconfirm python3
           - cd tools/create-disk
           - ./create-disk.py
-
-    - name: tools/upload
-      image: archlinux:base-devel
-      pull: always
-      commands:
-          - make -C tools/upload
-
-    - name: tools/emulator
-      image: archlinux:base-devel
-      pull: always
-      commands:
-          - pacman -Sy --noconfirm sdl2 sdl2_image
-          - make -C tools/emulator
