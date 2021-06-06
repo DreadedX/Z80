@@ -12,6 +12,9 @@ all:
 	$(MAKE) -C firmware/controller
 	$(MAKE) -C firmware/keyboard
 
+	$(MAKE) -C hardware/keyboard
+	$(MAKE) -C hardware/memory
+
 	$(MAKE) -C tools/emulator
 	$(MAKE) -C tools/upload
 
