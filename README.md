@@ -26,9 +26,7 @@ This repository acts a a meta repository that contains all the different sub-pro
 
 - **tools**: Various tools to aid in the development
 	- [convert-font](https://git.mtgames.nl/z80/convert-font): Convert a font image to verilog code for easy inclusion in the gpu
-	- [create-disk](https://git.mtgames.nl/z80/create-disk): Create a disk image that contains a bootloader, CP/M and a compatible filesystem including specified files
 	- [emulator](https://git.mtgames.nl/z80/emulator): An emulator to allow for easier software development for the computer
-	- [mount-cpm](https://git.mtgames.nl/z80/mount-cpm): A tools that can mount the disk images
 	- [setup](https://git.mtgames.nl/z80/setup): Setup scripts that builds various required tools
 	- [upload](https://git.mtgames.nl/z80/upload): A tool for uploading firmware to the computer
 
