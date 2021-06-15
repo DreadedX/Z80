@@ -149,17 +149,6 @@ steps:
       commands:
           - make -C tools/upload
 
-    - name: tools/create-disk
-      image: archlinux:base-devel
-      pull: always
-      volumes:
-          - name: pkg
-            path: /var/cache/pacman/pkg
-      commands:
-          - pacman -Sy --noconfirm python3
-          - cd tools/create-disk
-          - ./create-disk.py
-
 
 volumes:
     - name: pkg
